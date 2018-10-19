@@ -10,31 +10,16 @@ namespace Lab10
         
         class Program
     {
-        static double userInputs;
         static void Main(string[] args)
         {
-            bool parseTest = false;
+
             Console.WriteLine("Welcome to the Circle Tester");
-            while (!parseTest)
-            {
-                Console.Write("Enter radius: ");
-                try
-                {
 
-                    parseTest = double.TryParse(Console.ReadLine(), out userInputs);
-                    if(userInputs <= 0)
-                    {
-                        Console.WriteLine("Enter a number greater than 0\n");
-                        parseTest = false;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex);
-                }
-            }
 
-            Circle myCircle = new Circle(userInputs);
+            Validator check = new Validator(Console.ReadLine());
+            
+
+            Circle myCircle = new Circle(check.DoValidation());
 
             string formattedArea = myCircle.CalculateFormattedArea();
             string formattedCircum = myCircle.CalculateFormattedCircumference();
