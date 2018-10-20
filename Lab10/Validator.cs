@@ -18,19 +18,21 @@ namespace Lab10
 
         public static bool parseTest;
         public double outPutNum;
+
         public double DoValidation()
         {
             parseTest = false;
             while (!parseTest)
             {
-                Console.Write("Enter radius: ");
                 try
                 {
                     parseTest = double.TryParse(GetUserData, out outPutNum);
                     if (outPutNum <= 0)
                     {
                         Console.WriteLine("Enter a number greater than 0\n");
+                        Console.Write("Enter radius: ");
                         parseTest = false;
+                        GetUserData = Console.ReadLine();
                     }
                 }
                 catch (Exception ex)

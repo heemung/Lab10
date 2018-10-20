@@ -15,7 +15,7 @@ namespace Lab10
 
             Console.WriteLine("Welcome to the Circle Tester");
 
-
+            Console.Write("Enter radius: ");
             Validator check = new Validator(Console.ReadLine());
             
 
