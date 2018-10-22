@@ -9,6 +9,7 @@ namespace Lab10
 {
     class Circle
     {
+
         public Circle(double radius)
         {
             Radius = radius;
@@ -21,6 +22,8 @@ namespace Lab10
             return 2 * Math.PI * Radius;
 
         }
+
+        //passes Calculate Circumference to format number method to convert to string
         public string CalculateFormattedCircumference()
         {
             string formatCircum = FormatNumber(CalculateCircumference());
@@ -30,6 +33,8 @@ namespace Lab10
         {
             return Math.Pow(Radius, 2) * Math.PI; 
         }
+
+        //passes Calculate Area to format number method to convert to string
         public string CalculateFormattedArea()
         {
             string formatArea = FormatNumber(CalculateArea());

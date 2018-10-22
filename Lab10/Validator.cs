@@ -19,9 +19,12 @@ namespace Lab10
         public static bool parseTest;
         public double outPutNum;
 
+        //catches 
         public double DoValidation()
         {
             parseTest = false;
+            //Try parse will continue unless try parse double is false.
+            //if statment wants a number greater than 0, returns double.
             while (!parseTest)
             {
                 try

@@ -14,6 +14,8 @@ namespace Lab10
         }
         public string StringCont { get; set; }
 
+        // user continue loop and if statement , will return bool. Will only 
+        //return if yes or no
         public bool AnswerValid()
         {
             Console.WriteLine("Do you wish to continue? 'yes' / 'no'");
